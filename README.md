@@ -97,6 +97,19 @@ Your finished project must include all of the following requirements. **Unlike o
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. Explain what a token is used for.
+
+token is a generated authentication code that is used to transmit information from server to client.
+
 2. What steps can you take in your web apps to keep your data secure?
+
+use authorized pages that require username and password. use privateroute pages that can only be accessed with a token.
+
 3. Describe how web servers work.
+
+a web server stores, process and deliver requested webpages to a client; when the client has the right pathway
+and/or has passed authorization.
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+GET, POST, DELETE, PUT, PATCH
+
