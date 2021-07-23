@@ -6,6 +6,7 @@ import userEvent from "@testing-library/user-event";
 import Color from './Color';
 
 test("Renders without errors with blank color passed into component", () => {
+    render(<Color />)
 });
   
 test("Renders the color passed into component", () => {
