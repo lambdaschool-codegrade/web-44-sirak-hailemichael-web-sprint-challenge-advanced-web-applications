@@ -21,7 +21,7 @@ const Login = () => {
 
   const handleChange = e =>{
     setLogin({
-      ...login, [e.target.name] : [e.target.value]
+      ...login, [e.target.name] : e.target.value
     })
   }
   //post api 
@@ -39,6 +39,13 @@ const Login = () => {
     .catch(err =>{
       console.log(err)
     })
+
+    //error message
+    if (login.username==='' || login.password==='') {
+      setError('Both fields required')
+    } else if(login.username!=='Lambda' || login.password!=='School') {
+      setError('Incorrect username or password')
+    }
   }
 
   return (
@@ -54,6 +61,7 @@ const Login = () => {
           name='username'
           value={login.username}
           onChange={handleChange}
+          data-testid='username'
           />
 
           <label htmlFor='password'/> Password:  
@@ -62,6 +70,7 @@ const Login = () => {
           name='password'
           value={login.password}
           onChange={handleChange}
+          data-testid='password'
           />      
           <button>Log In</button>
         </form>
